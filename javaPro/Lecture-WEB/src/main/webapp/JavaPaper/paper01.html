@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	num = Number(prompt('물건값'))
+	money = Number(prompt('지불한 돈'))
+	change = money - num
+	
+	document.write(`${money} - ${num} = ${change} <br>`)
+	document.write(`1000원 :  ${Math.floor((change) / 1000)} 장 <br>`)
+	document.write(`500원 :  ${Math.floor((change) % 1000 / 500)} 개 <br>`)
+	document.write(`100원 :  ${Math.floor((change) % 1000 % 500 / 100) } 개 <br>`)
+	document.write(`50원 :  ${Math.floor((change) % 1000 % 500 % 100 / 50) } 개 <br>`)
+	document.write(`10원 :  ${Math.floor((change) % 1000 % 500 % 100 % 50 / 10 )} 개 <br>`)
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

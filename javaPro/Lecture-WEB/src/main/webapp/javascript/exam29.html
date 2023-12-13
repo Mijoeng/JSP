@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function makePerson(name, id, age) {
+		let p = {
+			name: name,
+			id: id,
+			age: age,
+			info: function() {
+				let msg = ''
+				for(let key in this) {
+					if(typeof this[key] != 'function')
+						msg += `${key} : ${this[key]}\n`
+				}
+				alert(msg)
+			}
+		}
+		return p
+	}
+	
+	let p = makePerson('홍길동', 'hong', 25)
+	let p2 = makePerson('강길동', 'kang', 30)
+	console.log(p)
+	console.log(p2)
+	p.info()
+	p2.info()
+	console.log(p.toString())
+</script>
+</head>
+<body>
+
+</body>
+</html>

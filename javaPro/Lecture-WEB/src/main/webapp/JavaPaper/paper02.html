@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let total = 0
+	
+	for(let i = 0; i < 5; i++) {
+		let num = Number(prompt('정수 입력'))
+		total += num ;
+		document.write(`${num}`)
+		if (i === 4) {
+			break;
+		} document.write(`+`)
+		let btn = confirm('계속 입력할래?')
+		
+		if (!btn) {
+			break;
+		}	
+	} document.write(`<br> ${total}`)
+</script>
+</head>
+<body>
+
+</body>
+</html>

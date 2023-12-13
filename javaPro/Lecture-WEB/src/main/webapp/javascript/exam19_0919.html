@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function aaa(a=0, b=0, c=0) { //초기화
+		/*
+		a = a|| 0
+		if(!b) b = 0
+		if (typeof(c) == 'undefined') c =0
+		*/
+		document.write(`a : ${a}, b : ${b}, c : ${c} <br>`)
+	}
+	
+	function bbb (...numbers) {
+		document.write(`numbers : [${numbers}]<br>`)
+	}
+	
+	aaa(1, 2, 3)
+	aaa(1, 2)
+	aaa(1)
+	aaa()
+	
+	let nums = [10,20,30]
+	aaa(nums)
+	aaa(...nums)
+	
+	bbb(1,2,3)
+	bbb(1,2,3,4)
+	bbb(1,2)
+	bbb(...nums)
+</script>
+</head>
+<body>
+
+</body>
+</html>

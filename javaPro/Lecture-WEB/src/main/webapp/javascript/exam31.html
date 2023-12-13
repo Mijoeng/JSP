@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function Person(name, id, age) {
+		this.name = name
+		this.id = id
+		this.age = age
+		this.toString = function() {
+			let msg = ''
+			for(let key in this) {
+				msg += `${key} : ${this[key]}\n`
+			}
+			return msg
+		}
+	}
+	let p = new Person('홍길동', 'hong', 25)
+	let p2 = new Person('강길동', 'kang', 30)
+	
+	p.aaa = function() {
+		console.log('p.aaa() 함수호출...')
+	}
+	
+	Person.prototype.bbb = function() {
+		console.log('bbb() 함수 호출...')
+	}
+	
+	console.log(p.toString())
+	console.log(p2.toString())
+	console.log(p)
+	console.log(p2)
+	
+	p.aaa()
+</script>
+</head>
+<body>
+
+</body>
+</html>

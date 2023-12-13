@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		let h2Tag = document.createElement("h2")
+		console.log(h2Tag)
+		document.appendChild(h2Tag)
+		
+		let imgTag = document.createElement('img')
+		imgTag.src = 'https://www.naver.com/'
+		
+		let aTag = document.createElement('a')
+		aTag.href = 'https://www.naver.com/'
+		aTag.setAttribute('target', '_blank')
+		aTag.append(imgTag)
+		console.log(aTag)
+	}
+</script>
+</head>
+<body>
+	
+</body>
+</html>

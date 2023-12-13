@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let array = [4, 12, 9, 22, 11]
+	
+	document.write(`array : ${array} <br>`)
+	
+	//정수정렬 left - right(오름차순) right - left(내림차순)
+	array.sort(function(left, right) {
+		return left - right
+	})
+	document.write(`sort() array : ${array}<br>`)
+	 
+	 /*
+	let s = 0
+	for (let num of array) {
+		s += num
+	}
+	*/
+	
+	let s = array.reduce(function(before, element) {
+		return before + element
+	})
+	
+	document.write(`[${array}] 총합 : ${ s }<br>`)
+	
+	/*
+	let bool = true
+	for(let num of array) {
+		if (num % 2) {
+			bool = false
+			break
+		}
+	}
+	*/
+	 //every = 모든원소가 true일때
+	let bool = array.every(function(element){
+		return element % 2 == 0
+	})
+	document.write(`[${array}] 모든 원소의 짝수 여부 : ${bool} <br>`)
+	//some = 하나라도 true 면 true
+	let booll = array.some(function(element){
+	return element % 2
+	})
+	document.write(`[${array}] 모든 원소의 홀수 존재 여부 : ${booll}`)
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

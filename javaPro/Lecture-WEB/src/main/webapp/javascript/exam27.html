@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function checkForm() {
+		let f = document.inputForm
+		// id에 데이터 입력여부 판단
+		if(f.id.value == '') {
+			alert('아이디를 입력하세요')
+			f.id.focus()
+			return false
+		}
+		if(f.pwd.value == '') {
+			alert('패스워드를 입력하세요')
+			f.pwd.focus()
+			return false
+		}
+		if(f.name.value == '') {
+			alert('이름을 입력하세요')
+			f.name.focus()
+			return false
+		}
+		return true
+	}
+</script>
+</head>
+<body>
+	<form method="post" action="exam28.html" name="inputForm" 
+		  onsubmit="return checkForm()">
+		ID : <input type="text" name="id" id="id"><br>
+		PASSWORD : <input type="password" name="pwd"><br>
+		NAME : <input type="text" name="name"><br>
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

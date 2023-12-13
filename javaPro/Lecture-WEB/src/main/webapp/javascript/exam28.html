@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let person = {
+			'id': 'hong', 
+			name: '홍길동', 
+			'age': 25, 
+			info: function() {
+				let msg = ''
+				msg += `id : ${ this.id }\n`
+				msg += `name : ${ this.name }\n`
+				msg += `phone : ${ this.phone }\n`
+				alert(msg)
+			}
+	}
+	console.log(typeof(person))
+	console.log(person)
+	
+	document.write('속성 id 존재여부 : ' + ('id' in person) + '<br>')
+	document.write(`속성 name 존재여부 : ${"name" in person}<br>`)
+	document.write(`속성 phone 존재여부 : ${"phone" in person}<br>`)
+	
+	person.phone = '010-1111-2222'
+	person['addr'] = '경기도 성남시 수정구'
+	console.log(person)
+	
+	delete person['age']
+	
+	person.info()
+	
+	with(person) {
+		document.write('id : ' + id + '<br>')
+		document.write(`name : ${ name }<br>`)
+	}
+	
+	person.toString = function() {
+		let msg = ''
+		with(this) {
+			msg += 'id : ' + id + '<br>'
+			msg += `name : ${ name }<br>`
+		}
+		return msg
+	}
+	
+	document.write(person.toString())
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+

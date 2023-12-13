@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	class Person {
+		constructor(name, phone, age) {
+			this._name = name
+			this._phone = phone
+			this._age = age
+		}
+		
+		// setter/getter 함수 정의
+		get name() {
+			return this._name
+		}
+		
+		set name(name) {
+			this._name = name
+		}
+		
+		toString() {
+			let msg = ''
+			for(let key in this) {
+				if(typeof this[key] != 'function')
+					msg += `${key} : ${this[key]}\n`
+			}
+			return msg
+		}
+	}
+	
+	let p = new Person('홍길동', 'hong', 25)
+	console.log(p.toString())
+	p.name = '홍길똥'
+	console.log(p.name)
+</script>
+</head>
+<body>
+
+</body>
+</html>

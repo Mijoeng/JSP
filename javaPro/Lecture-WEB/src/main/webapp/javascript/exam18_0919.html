@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let array = [1, 2, 3, 4, 5]
+
+	//let copy = array //얕은복사
+	
+	//깊은복사
+	let copy = [...array] //전개 연산자
+	/*
+	let copy = []
+	for (let num of array) {
+		copy.push(num)
+	}
+	*/
+	
+	document.write(`array : ${array}<br>`)
+	document.write(`copy : ${copy}<br>`)
+	
+	copy[3] = 199
+	document.write(`array : ${array}<br>`)
+	document.write(`copy : ${copy}<br>`)
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	
+	function bbb(a, b) {
+		alert(`a : ${a}, b : ${b}`)
+	}
+	
+	function aaa() {
+		alert('선언적 함수 aaa() 호출')
+	}
+	
+	let aaa = function() {
+		alert('익명함수 aaa() 호출')
+	}
+	
+	function ccc(func) {
+		func()
+	}
+	
+	ccc(function() {
+		alert('익명함수를 호출')
+	})
+	
+	ccc(bbb)
+	
+	let num01 = 30, num02 = 40
+	bbb(num01, num02)
+	
+	bbb(10, 20)
+	aaa()
+</script>
+</head>
+<body>
+
+</body>
+</html>

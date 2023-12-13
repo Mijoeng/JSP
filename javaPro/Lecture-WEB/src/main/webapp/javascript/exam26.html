@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5]
+        let copy = [...arr] //주소 복사 얕은 복사
+        console.log(copy)
+
+        let copy2 = []
+        for(let i of arr) {
+            copy2.push(i)
+        }
+        console.log(copy2)
+
+    </script>
+</body>
+</html>
